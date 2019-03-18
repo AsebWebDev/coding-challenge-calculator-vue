@@ -24,8 +24,15 @@ export default {
       }
     },
     calcResult: function() {
-      this.store.unshift(this.display);
-      this.display = eval(this.display).toString();
+      try {
+        this.store.unshift(this.display);
+        this.display = eval(this.display).toString();
+      } catch (e) {
+        // if (e instanceof SyntaxError) {
+            this.display = '0';
+            this.store.unshift("ERROR");
+        // }
+      }
     }
   },
   data () {

@@ -13,7 +13,7 @@ export default {
   name: 'Calculator',
   props: {
     display: String,
-    store: [String]
+    store: Array
   }
 }
 </script>
