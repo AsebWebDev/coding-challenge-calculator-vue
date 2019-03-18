@@ -46,7 +46,6 @@ export default {
 <style scoped>
   * {
     display: flex;
-    flex-wrap: wrap;
   }
 
   .keypad {
@@ -60,10 +59,12 @@ export default {
   .keypad-left {
     width: 300px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
   .keypad-right {
     width: 100px;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
 </style>
