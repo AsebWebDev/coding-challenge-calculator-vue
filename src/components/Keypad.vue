@@ -14,6 +14,8 @@
         <Key v-on:click.native="$parent.addInput('0')" keyValue="0" />
         <Key v-on:click.native="$parent.addInput('DEL')" keyValue="DEL" />
         <Key v-on:click.native="$parent.addInput('C')" keyValue="C" />
+        <Key v-on:click.native="$parent.addInput('.')" keyValue="." />
+        <Key v-on:click.native="$parent.calcResult()" keyValue="Calc" />
     </div>
     <div class="keypad-right">
       <Key v-on:click.native="$parent.addInput('+')" keyValue="+" />
@@ -22,7 +24,6 @@
       <Key v-on:click.native="$parent.addInput(':')" keyValue=":" />
     </div>
   </div>
-  <button v-on:click="$parent.calcResult()">Calc</button>
 </div>
 </template>
 
@@ -48,6 +49,11 @@ export default {
     display: flex;
   }
 
+  button {
+    height: 50px;
+    max-width: 60px;
+  }
+
   .keypad {
     flex-direction: column;
   }
@@ -65,6 +71,7 @@ export default {
     width: 100px;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: start;
   }
 
 </style>
