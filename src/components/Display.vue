@@ -54,6 +54,6 @@ export default {
 
   .main {
     margin-top: 15px;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 </style>

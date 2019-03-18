@@ -1,21 +1,26 @@
 <template>
   <div class="calculator">
+    <Joke v-bind:joke="joke"/>
     <Display v-bind:display="display" v-bind:store="store"/>
     <Keypad :addInput="addInput" :calcResult="calcResult"/>
   </div>
 </template>
 
 <script>
-import Display from './Display.vue'
-import Keypad from './Keypad.vue'
+import Display from './Display.vue';
+import Keypad from './Keypad.vue';
+import Joke from './Joke.vue';
+import axios from 'axios';
+
 
 export default {
   name: 'calculator',
   components: {
-    Display, Keypad
+    Display, Keypad, Joke
   }, 
   methods: {
     addInput: function(val) {
+      this.joke = '...is about to tell a joke';
       if (val === "C") {
         this.display = '0';
         this.store = [];
@@ -36,12 +41,20 @@ export default {
             this.store.unshift("ERROR");
             console.log(e.message)
       }
+      this.getJoke();
+    },
+    getJoke: function() {
+      axios
+        .get('http://api.icndb.com/jokes/random')
+        .then(response => (this.joke = response.data.value.joke))
+        .catch(err => console.log(err))
     }
   },
   data () {
     return {
       display: '0',
-      store: []
+      store: [],
+      joke: '...is about to tell a joke'
     }
   }
 }
@@ -58,6 +71,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 500px;
   }
 
 </style>
