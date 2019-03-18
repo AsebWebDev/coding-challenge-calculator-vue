@@ -1,0 +1,34 @@
+<template>
+  <div class="key">
+    <span>{{keyValue}}</span>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "key",
+  components: {},
+  props: {
+    keyValue: String
+  },
+  data() {
+    return {};
+  }
+};
+</script>
+
+<style scoped>
+span {
+  font-size: 2rem;
+}
+
+.key {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+}
+</style>
