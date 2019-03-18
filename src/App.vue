@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Calculator</h1>
+    <h1>CALCULATOR</h1>
     <Calculator msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -24,5 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+  font-family: 'Josefin Sans', sans-serif;
 }
 </style>

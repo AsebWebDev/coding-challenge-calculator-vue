@@ -16,7 +16,10 @@ export default {
   }, 
   methods: {
     addInput: function(val) {
-      if (val === "C") this.display = '0'
+      if (val === "C") {
+        this.display = '0';
+        this.store = [];
+      }
       else if (val === "DEL") this.display = this.display.slice(0, -1)
       else {
         if (this.display === '0') this.display = '';
@@ -25,13 +28,13 @@ export default {
     },
     calcResult: function() {
       try {
-        this.store.unshift(this.display);
+        let currentDisplay = this.display;
         this.display = eval(this.display).toString();
+        this.store.unshift(currentDisplay);
       } catch (e) {
-        // if (e instanceof SyntaxError) {
             this.display = '0';
             this.store.unshift("ERROR");
-        // }
+            console.log(e.message)
       }
     }
   },
