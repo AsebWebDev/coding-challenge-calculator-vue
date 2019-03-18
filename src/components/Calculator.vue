@@ -2,7 +2,7 @@
   <div class="calculator">
     <Display v-bind:display="display"/>
     <input type="text" v-model="display">
-    <Keypad :addInput="addInput"/>
+    <Keypad :addInput="addInput" :calcResult="calcResult"/>
   </div>
 </template>
 
@@ -17,8 +17,10 @@ export default {
   }, 
   methods: {
     addInput: function(val) {
-      console.log(val);
       this.display = this.display + val;
+    },
+    calcResult: function() {
+      this.display = eval(this.display).toString();
     }
   },
   data () {

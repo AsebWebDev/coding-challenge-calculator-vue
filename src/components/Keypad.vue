@@ -21,7 +21,7 @@
       <Key keyValue=":" />
     </div>
   </div>
-  <button v-on:click="$parent.addInput('a')">Calc</button>
+  <button v-on:click="$parent.calcResult()">Calc</button>
 </div>
 </template>
 
