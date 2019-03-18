@@ -1,7 +1,6 @@
 <template>
   <div class="calculator">
-    <Display v-bind:display="display"/>
-    <input type="text" v-model="display">
+    <Display v-bind:display="display" v-bind:store="store"/>
     <Keypad :addInput="addInput" :calcResult="calcResult"/>
   </div>
 </template>
@@ -25,18 +24,25 @@ export default {
       }
     },
     calcResult: function() {
+      this.store.unshift(this.display);
       this.display = eval(this.display).toString();
     }
   },
   data () {
     return {
-      display: '0'
+      display: '0',
+      store: []
     }
   }
 }
 </script>
 
 <style scoped>
+
+  *{
+    background-color: #2f2f31;
+    padding: 20px;
+  }
 
   .calculator {
     display: flex;

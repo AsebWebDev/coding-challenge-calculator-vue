@@ -1,7 +1,9 @@
 <template>
   <div id="display">
-    <div>
-     <h1><span> {{ display }} </span></h1>
+    <span>{{store[1]}}</span>
+    <span>{{store[0]}}</span>
+    <div class="main">
+      <span> {{ display }} </span>
     </div>
   </div>
 </template>
@@ -10,7 +12,8 @@
 export default {
   name: 'Calculator',
   props: {
-    display: String
+    display: String,
+    store: [String]
   }
 }
 </script>
@@ -21,16 +24,22 @@ export default {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
   }
+  
+  .main {
+    margin-top: 15px;
+    font-size: 3rem;
+  }
 
   #display {
+    background-color: #D4D4D2;
     height: 100px;
     width: 400px;
     padding-right: 20px;
-    border: 1px solid black;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    text-align: right;
+    align-items: flex-end;
     justify-content: flex-end;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 </style>

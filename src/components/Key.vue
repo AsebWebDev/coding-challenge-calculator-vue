@@ -20,15 +20,18 @@ export default {
 <style scoped>
 span {
   font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .key {
+  background-color: #424345;
+  color: white;
   width: 70px;
   height: 70px;
-  margin: 10px;
+  margin: 4px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
 }
 </style>
