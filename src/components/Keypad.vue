@@ -62,13 +62,13 @@ export default {
   }
 
   .keypad-left {
-    width: 310px;
+    max-width: 70%;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
   }
   .keypad-right {
-    width: 100px;
+    width: 30%;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: start;

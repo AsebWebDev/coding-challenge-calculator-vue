@@ -34,4 +34,9 @@ span {
   align-items: center;
   justify-content: center;
 }
+
+.key:hover {
+  background-color: yellow;
+  color: black;
+}
 </style>

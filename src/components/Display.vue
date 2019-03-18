@@ -32,8 +32,9 @@ export default {
   #display {
     background-color: #D4D4D2;
     height: 100px;
-    width: 400px;
-    padding-right: 20px;
+    width: 85%;
+    padding-right: 6%;
+    box-shadow: inset 0 0 10px #000000;
     display: flex;
     flex-direction: row;
     text-align: right;
