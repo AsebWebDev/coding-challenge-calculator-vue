@@ -2,23 +2,24 @@
 <div class="keypad">
   <div class="keypad-keys">
     <div class="keypad-left">
-        <Key keyValue="1" />
-        <Key keyValue="2" />
-        <Key keyValue="3" />
-        <Key keyValue="4" />
-        <Key keyValue="5" />
-        <Key keyValue="6" />
-        <Key keyValue="7" />
-        <Key keyValue="8" />
-        <Key keyValue="9" />
-        <Key keyValue="DEL" />
-        <Key keyValue="C" />
+        <Key v-on:click.native="$parent.addInput('7')" keyValue="7" />
+        <Key v-on:click.native="$parent.addInput('8')" keyValue="8" />
+        <Key v-on:click.native="$parent.addInput('9')" keyValue="9" />
+        <Key v-on:click.native="$parent.addInput('4')" keyValue="4" />
+        <Key v-on:click.native="$parent.addInput('5')" keyValue="5" />
+        <Key v-on:click.native="$parent.addInput('6')" keyValue="6" />
+        <Key v-on:click.native="$parent.addInput('1')" keyValue="1" />
+        <Key v-on:click.native="$parent.addInput('2')" keyValue="2" />
+        <Key v-on:click.native="$parent.addInput('3')" keyValue="3" />
+        <Key v-on:click.native="$parent.addInput('0')" keyValue="0" />
+        <Key v-on:click.native="$parent.addInput('DEL')" keyValue="DEL" />
+        <Key v-on:click.native="$parent.addInput('C')" keyValue="C" />
     </div>
     <div class="keypad-right">
-      <Key keyValue="+" />
-      <Key keyValue="-" />
-      <Key keyValue="/" />
-      <Key keyValue=":" />
+      <Key v-on:click.native="$parent.addInput('+')" keyValue="+" />
+      <Key v-on:click.native="$parent.addInput('-')" keyValue="-" />
+      <Key v-on:click.native="$parent.addInput('/')" keyValue="/" />
+      <Key v-on:click.native="$parent.addInput(':')" keyValue=":" />
     </div>
   </div>
   <button v-on:click="$parent.calcResult()">Calc</button>

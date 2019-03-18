@@ -17,7 +17,11 @@ export default {
   }, 
   methods: {
     addInput: function(val) {
-      this.display = this.display + val;
+      if (val === "C") this.display = '0'
+      else {
+        if (this.display === '0') this.display = '';
+        this.display = this.display + val;
+      }
     },
     calcResult: function() {
       this.display = eval(this.display).toString();
@@ -25,7 +29,7 @@ export default {
   },
   data () {
     return {
-      display: ''
+      display: '0'
     }
   }
 }
