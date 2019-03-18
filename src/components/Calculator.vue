@@ -8,13 +8,12 @@
 
 <script>
 import Display from './Display.vue'
-// import Keypad from './Keypad.vue'
+import Keypad from './Keypad.vue'
 
 export default {
   name: 'calculator',
   components: {
-    Display, 
-    // Keypad
+    Display, Keypad
   }, 
   data () {
     return {
