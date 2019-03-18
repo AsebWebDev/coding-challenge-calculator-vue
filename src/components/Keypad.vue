@@ -21,7 +21,7 @@
       <Key v-on:click.native="$parent.addInput('+')" keyValue="+" />
       <Key v-on:click.native="$parent.addInput('-')" keyValue="-" />
       <Key v-on:click.native="$parent.addInput('/')" keyValue="/" />
-      <Key v-on:click.native="$parent.addInput(':')" keyValue=":" />
+      <Key v-on:click.native="$parent.addInput('*')" keyValue="*" />
     </div>
   </div>
 </div>
