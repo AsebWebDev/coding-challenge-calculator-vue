@@ -2,7 +2,7 @@
   <div class="calculator">
     <Display v-bind:display="display"/>
     <input type="text" v-model="display">
-    <Keypad/>
+    <Keypad :addInput="addInput"/>
   </div>
 </template>
 
@@ -15,6 +15,12 @@ export default {
   components: {
     Display, Keypad
   }, 
+  methods: {
+    addInput: function(val) {
+      console.log(val);
+      this.display = this.display + val;
+    }
+  },
   data () {
     return {
       display: ''
@@ -29,6 +35,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
   }
 
 </style>

@@ -21,7 +21,7 @@
       <Key keyValue=":" />
     </div>
   </div>
-  <button>Calc</button>
+  <button v-on:click="$parent.addInput('a')">Calc</button>
 </div>
 </template>
 
@@ -33,6 +33,7 @@ export default {
   components: {
     Key
   }, 
+  props: ['addInput'],
   data () {
     return {
       
