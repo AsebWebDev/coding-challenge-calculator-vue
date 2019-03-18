@@ -18,6 +18,7 @@ export default {
   methods: {
     addInput: function(val) {
       if (val === "C") this.display = '0'
+      else if (val === "DEL") this.display = this.display.slice(0, -1)
       else {
         if (this.display === '0') this.display = '';
         this.display = this.display + val;
