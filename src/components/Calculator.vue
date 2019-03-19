@@ -64,7 +64,7 @@ export default {
 
   *{
     background-color: #2f2f31;
-    padding: 20px;
+    padding: 15px;
   }
 
   .calculator {
@@ -72,6 +72,7 @@ export default {
     flex-direction: column;
     align-items: center;
     max-width: 500px;
+    border-radius: 15px;
   }
 
 </style>

@@ -26,6 +26,7 @@ export default {
   align-items: flex-end;
   font-size: 1.2rem;
   color: grey;
+  height: 100px;
 }
 
 img {

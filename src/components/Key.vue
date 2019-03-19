@@ -18,25 +18,25 @@ export default {
 </script>
 
 <style scoped>
-span {
-  font-size: 2rem;
-  font-family: 'Josefin Sans', sans-serif;
-}
+  span {
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
 
-.key {
-  background-color: #424345;
-  color: white;
-  width: 70px;
-  height: 70px;
-  margin: 4px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .key {
+    background-color: #424345;
+    color: white;
+    width: 70px;
+    height: 70px;
+    margin: 4px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.key:hover {
-  background-color: yellow;
-  color: black;
-}
+  .key:hover {
+    background-color: yellow;
+    color: black;
+  }
 </style>

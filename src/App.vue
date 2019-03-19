@@ -1,9 +1,11 @@
+// TODO: animations?
+
 <template>
   <div id="app">
     <div class="header">
       <h1>CHUCKULATOR</h1>
     </div>
-    <Calculator msg="Welcome to Your Vue.js App"/>
+    <Calculator/>
   </div>
 </template>
 
@@ -20,8 +22,19 @@ export default {
 
 <style>
 
+  html {
+    margin: 0;
+    padding: 0;
+    background-image: url(../public/bgpic3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+  }
+
   h1 {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
   }
 
   img {
@@ -33,16 +46,13 @@ export default {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    height: 80px;
   }
 
 </style>
