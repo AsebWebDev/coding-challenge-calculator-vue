@@ -1,9 +1,7 @@
-// TODO: animations?
-
 <template>
   <div id="app">
     <div class="header">
-      <h1>CHUCKULATOR</h1>
+      <h1 class="animated bounce">CHUCKULATOR</h1>
     </div>
     <Calculator/>
   </div>
@@ -52,7 +50,7 @@ export default {
   }
 
   .header {
-    height: 80px;
+    height: 100px;
   }
 
 </style>

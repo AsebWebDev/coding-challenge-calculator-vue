@@ -1,5 +1,5 @@
 <template>
-  <div class="joke">
+  <div class="joke animated fadeIn">
     <div>
       <img src="http://www.sclance.com/pngs/chuck-norris-png/chuck_norris_png_272129.png">  
     </div>
