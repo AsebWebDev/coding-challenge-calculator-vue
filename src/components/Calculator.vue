@@ -45,7 +45,7 @@ export default {
     },
     getJoke: function() {
       axios
-        .get('http://api.icndb.com/jokes/random')
+        .get('https://api.icndb.com/jokes/random')
         .then(response => (this.joke = response.data.value.joke))
         .catch(err => console.log(err))
     }
