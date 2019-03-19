@@ -26,6 +26,8 @@ Coding process:
 2. Set up wireframes
 3. Create Basic Components with minimal style, but not functionality yet
 4. Add click events on each key and add logic to the calculator
+5. Polish style and fix bugs
+6. Tried to deploy to Heroku, but found out that its easier on netlify
 
 
 
