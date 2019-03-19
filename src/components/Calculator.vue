@@ -23,9 +23,11 @@ export default {
     handleKeypress: function(e) {
       if (Number(e.key) >= 0 && Number(e.key) <= 9) this.addInput(e.key);
       if (e.key === "," || e.key === ".") this.addInput('.');
+      if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "*") this.addInput(e.key);
       if (e.key === "Backspace") this.addInput('DEL');
       if (e.key === "Delete") this.addInput('C');
       if (e.key === "Enter") this.calcResult();
+      console.log(e.key);
     },
 
     addInput: function(val) {
