@@ -41,6 +41,7 @@ export default {
     align-items: flex-end;
     justify-content: space-between;
     font-size: 1.5rem;
+    overflow: hidden;
   }
 
   .display-left {
