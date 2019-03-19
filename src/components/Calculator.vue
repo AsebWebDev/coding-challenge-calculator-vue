@@ -19,36 +19,51 @@ export default {
     Display, Keypad, Joke
   }, 
   methods: {
+
+    handleKeypress: function(e) {
+      if (Number(e.key) >= 0 && Number(e.key) <= 9) this.addInput(e.key);
+      if (e.key === "," || e.key === ".") this.addInput('.');
+      if (e.key === "Backspace") this.addInput('DEL');
+      if (e.key === "Delete") this.addInput('C');
+      if (e.key === "Enter") this.calcResult();
+    },
+
     addInput: function(val) {
       this.joke = '...is about to tell a joke';
       if (val === "C") {
         this.display = '0';
         this.store = [];
-      }
-      else if (val === "DEL") this.display = this.display.slice(0, -1)
-      else {
+      } else if (val === "DEL") {
+        this.display = this.display.slice(0, -1);
+        if (this.display === '') this.display = "0";
+      } else {
         if (this.display === '0') this.display = '';
         this.display = this.display + val;
       }
     },
+
     calcResult: function() {
       try {
-        let currentDisplay = this.display;
+        //check if last stored calculation is the same as current
+        //if so, do not store again
+        if (this.store[0] !== this.display) this.store.unshift(this.display);
+        //evaluate result and show it
         this.display = eval(this.display).toString();
-        this.store.unshift(currentDisplay);
       } catch (e) {
             this.display = '0';
             this.store.unshift("ERROR");
-            console.log(e.message)
       }
       this.getJoke();
     },
+
     getJoke: function() {
       axios
         .get('https://api.icndb.com/jokes/random')
         .then(response => (this.joke = response.data.value.joke))
-        .catch(err => console.log(err))
     }
+  },
+  mounted(){
+    document.addEventListener("keydown", this.handleKeypress)
   },
   data () {
     return {
