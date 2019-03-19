@@ -1,5 +1,10 @@
 # coding-challenge-calculator-vue
 
+What a nice coding challenge for a company i like a lot :)
+
+Here is a small deploy for my app:
+https://zen-montalcini-4b7551.netlify.com/
+
 ## Project setup
 ```
 npm install
