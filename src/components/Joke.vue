@@ -1,7 +1,7 @@
 <template>
   <div class="joke animated fadeIn">
     <div>
-      <img src="http://www.sclance.com/pngs/chuck-norris-png/chuck_norris_png_272129.png">  
+      <img src="../assets/chuck.png">  
     </div>
     <div>
       <h1>{{joke}}</h1>
